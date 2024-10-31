@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style3.css') }}">
+    <title>Sign In</title>
+</head>
+<body align="container">
+<!-- Left Column: Image Section -->
+        <div class="image-section">
+            <div class="download-links">
+                <p>Download your Genez Mobile App</p>
+                <a href="#"><img src="static/styles/bxl-apple.svg" alt="App Store"  style="width: 30px; height: 20px;"></a>
+                <a href="#"><img src="static/styles/google-play-brands-solid.svg"  alt="Google Play" style="width: 30px; height: 20px;"></a>
+        </div>
+        <br>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class=flashes>
+            {% for message in messages %}
+                <p style="color:red;"><strong><mark>{{ message }}</mark></strong></p>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+<!-- Right Column: Login Form -->
+         <div class="container">
+        <div class="left-section">
+            <img src="static/styles/img15.png" alt="Mobile App" class="promo-image">
+            <div class="download-app">
+                <p>Download your Genezi Bank Mobile App</p>
+                <a href="#"><img src="static/styles/bxl-apple.svg" alt="App Store"   style="width: 30px; height: 20px;"></a>
+                <a href="#"><img src="static/styles/google-play-brands-solid.svg"   alt="Google Play"  style="width: 30px; height: 20px;"></a>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="login-form">
+                <h2>Welcome to Genez Bank</h2>
+                <p>Please log in safely. Protect your log in information.</p>
+
+                <form action="customer-details" method="post">
+            <input type="hidden" name="type" value="existing">
+            <div class="textbox">
+                <input type="text" name="name" value="" placeholder="Enter Username" required autocomplete="off">
+            </div>
+            <br>
+            <div class="textbox">
+                <input type="password" name="password" value="" placeholder="Enter Password" required autocomplete="off">
+            </div>
+            <br>
+            <input class="btn" type="submit" name="" value="Sign in">
+             </form>
+                    <a href="#" class="forgot-password">Forgot your password?</a>
+                </form>
+                <div class="extra-links">
+                    <a href="#">New Account? Register Here</a> |
+                    <a href="#">Request for a loan</a> |
+                    <a href="#">Corporate Sole Account User? Register Here</a> |
+                    <a href="#">Create an Account Number here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

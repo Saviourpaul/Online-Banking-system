@@ -1,0 +1,240 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+
+.green-btn {
+	background-color: #4CAF50;
+}
+
+.blue-btn {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn i {
+	margin-left: 5px;
+
+}
+
+.btn {
+
+	background: rgb(228, 194, 84);
+	border: 2px solid #e8ecf3;
+	color: rgb(53, 53, 53);
+	font-size: 15px;
+	cursor: pointer;
+	margin: 10px 0;
+	padding: 8px 16px;
+	border-radius: 5px;
+	font-size: 14px;
+	border: none;
+	margin-right: 10px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+
+
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+/* Banner Styles */
+
+
+
+/* General Styles */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: orange;
+	padding: 10px 20px;
+	border-bottom: 1px solid #ccc;
+}
+
+.navbar-left {
+	display: flex;
+	align-items: center;
+}
+
+.navbar-right {
+	display: flex;
+	align-items: center;
+}
+
+.navbar-right .secondary-links {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+.secondary-links li {
+	margin: 0 10px;
+}
+
+.secondary-links li a {
+	text-decoration: none;
+	color: #333;
+	font-size: 14px;
+}
+
+/* Button Styles */
+.btn {
+	padding: 8px 16px;
+	border-radius: 5px;
+	font-size: 14px;
+	color: rgb(241, 235, 235);
+	cursor: pointer;
+	border: none;
+	margin-right: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.green-btn {
+	background-color: #4CAF50;
+}
+
+.blue-btn {
+	background-color: #003366;
+}
+
+.btn i {
+	margin-left: 5px;
+}
+
+/* Primary Navigation */
+.primary-nav {
+	background-color: #f9f9f9;
+	padding: 10px 0;
+	text-align: center;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+.primary-nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+}
+
+.primary-nav li {
+	margin: 0 15px;
+}
+
+.primary-nav li a {
+	text-decoration: none;
+	color: #333;
+	font-size: 16px;
+	transition: color 0.3s;
+}
+
+.primary-nav li a:hover {
+	color: #003366;
+	font-weight: bold;
+}
+
+.cards-section {
+	text-align: center;
+	padding: 40px 5%;
+}
+
+.cards {
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+	margin-top: 50px;
+	
+}
+
+.card {
+	background-color: #fff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	border-radius: 8px;
+	width: 450px;
+}
+
+.card img {
+	max-width: 100%;
+	border-radius: 8px 8px 0 0;
+}
+
+.account-button {
+	background-color: #44c767;
+	color: white;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	margin-top: 15px;
+	cursor: pointer;
+}
+
+.footer-top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 5%;
+	background-color: orange;
+	color: black
+}
+
+.footer-links {
+	display: flex;
+	justify-content: space-around;
+	padding: 20px 5%;
+	background-color: orange;
+	color: #5a5a5a;
+}
+
+.footer-links h4 {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.footer-links ul {
+	list-style: none;
+	padding: 0;
+}
+
+.footer-links ul li {
+	margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+	color: #5a5a5a;
+	text-decoration: none;
+}
+
+.footer-bottom {
+	text-align: center;
+	padding: 10px 5%;
+	background-color: orange;
+	color: #5a5a5a;
+}
+
+.app-links img {
+	width: 120px;
+	margin: 5px;
+}

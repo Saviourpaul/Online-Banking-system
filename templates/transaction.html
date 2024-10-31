@@ -1,0 +1,152 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Banking - Transaction History</title>
+    <link rel="stylesheet" href="static\styles\style7.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Online Banking</div>
+        <nav class="nav-links">
+            <a href="#">Accounts</a>
+            <a href="#">Pay & Transfer</a>
+            <a href="#">Tools & Investing</a>
+            <a href="#">Help & Support</a>
+            <a href="#" class="logout-btn">Log Out</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="account-info">
+            {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+            <p style="color:black;"><strong><mark>{{ message }}</mark></strong></p>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+            <h2>Regular Checking - 6105</h2>
+            <p>Available Balance: <span id="balance">$<strong> {{ balance }}</strong></span></p>
+        </div>
+
+        <div class="features-services">
+            <div class="features">
+                <h3>Features</h3>
+                <ul>
+                    <li>Keep the Change® savings transfers</li>
+                    <li>Balance Connect® for overdraft protection</li>
+                    <li>Paperless statements</li>
+                </ul>
+            </div>
+            <div class="services">
+                <h3>Services</h3>
+                <ul>
+                    <li>Manage card settings</li>
+                    <li>Order checks/deposit slips</li>
+                    <li>Dispute a transaction</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="transaction-section">
+            <h3>New Transaction</h3>
+            <form id="transactionForm">
+                <input type="number" id="amount" placeholder="Amount" required>
+                <select id="transactionType" required>
+                    <option value="deposit">Deposit</option>
+                    <option value="withdrawal">Withdrawal</option>
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+
+            <h3>Transaction History</h3>
+            <table id="transactionTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Type</th>
+                        <th>Amount</th>
+                        <th>Balance After</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Initial sample transaction -->
+                    <tr>
+                      
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+       <!-- Add this directly before the closing </body> tag -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const balanceElement = document.getElementById("balance");
+            const transactionTable = document.getElementById("transactionTable").getElementsByTagName("tbody")[0];
+            const transactionForm = document.getElementById("transactionForm");
+
+            let currentBalance = 0.00;
+
+            transactionForm.addEventListener("submit", (event) => {
+                event.preventDefault();
+
+                const amount = parseFloat(document.getElementById("amount").value);
+                const transactionType = document.getElementById("transactionType").value;
+                const date = new Date().toLocaleDateString();
+
+                if (isNaN(amount) || amount <= 0) {
+                    alert("Please enter a valid amount.");
+                    return;
+                }
+
+                let description = "";
+                let newBalance = currentBalance;
+
+                if (transactionType === "deposit") {
+                    newBalance += amount;
+                    description = "Deposit";
+                } else if (transactionType === "withdrawal") {
+                    if (amount > currentBalance) {
+                        alert("Insufficient funds for this withdrawal.");
+                        return;
+                    }
+                    newBalance -= amount;
+                    description = "Withdrawal";
+                }
+
+                addTransactionToTable(date, description, transactionType, amount, newBalance);
+                updateBalance(newBalance);
+                currentBalance = newBalance;
+
+                transactionForm.reset();
+            });
+
+            function addTransactionToTable(date, description, type, amount, balanceAfter) {
+                const row = document.createElement("tr");
+
+                row.innerHTML = `
+                    <td>${date}</td>
+                    <td>${description}</td>
+                    <td>${type.charAt(0).toUpperCase() + type.slice(1)}</td>
+                    <td>${type === "deposit" ? "+" : "-"}$${amount.toFixed(2)}</td>
+                    <td>$${balanceAfter.toFixed(2)}</td>
+                `;
+
+                transactionTable.appendChild(row);
+            }
+
+            function updateBalance(newBalance) {
+                balanceElement.textContent = `$${newBalance.toFixed(2)}`;
+            }
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,135 @@
+/* Basic Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f4;
+}
+
+/* Container Layout */
+.container {
+	display: flex;
+	height: 100vh;
+}
+
+/* Left Section Styling */
+.left-section {
+	flex: 1;
+	background-color: #f9f9f9;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+
+.promo-image {
+	max-width: 200%;
+	height: 1300px;
+	border-radius: 15px;
+}
+
+.download-app {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.download-app p {
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: #333;
+}
+
+.download-app a img {
+	width: 150px;
+	margin: 5px;
+}
+
+/* Right Section Styling */
+.right-section {
+	flex: 1;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
+}
+
+.login-form {
+	max-width: 350px;
+	width: 100%;
+	text-align: center;
+}
+
+.logo {
+	width: 150px;
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+	color: #003366;
+}
+
+p {
+	font-size: 14px;
+	color: #555;
+	margin-bottom: 20px;
+}
+
+/* Form Styling */
+form input {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+form button {
+	width: 100%;
+	padding: 10px;
+	background-color: #003366;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #002244;
+}
+
+.forgot-password {
+	display: block;
+	margin-top: 10px;
+	font-size: 12px;
+	color: #003366;
+	text-decoration: none;
+}
+
+.forgot-password:hover {
+	text-decoration: underline;
+}
+
+/* Extra Links Styling */
+.extra-links {
+	margin-top: 20px;
+	font-size: 12px;
+}
+
+.extra-links a {
+	color: #003366;
+	text-decoration: none;
+}
+
+.extra-links a:hover {
+	text-decoration: underline;
+}

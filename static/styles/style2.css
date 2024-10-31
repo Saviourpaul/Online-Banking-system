@@ -1,0 +1,146 @@
+/* General Styling */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f4;
+}
+
+/* Container that holds the entire page layout */
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 100vh;
+	padding: 0 5%;
+}
+
+/* Left Section: Logo and Contact Info */
+.left-section {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	background-color: #ffffff;
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	height: 600px;
+}
+
+.logo img {
+	width: 150px;
+	height: auto;
+	margin-bottom: 10px;
+}
+.img {
+	max-width: 200%;
+	height: 1300px;
+	border-radius: 15px;
+	position: absolute;
+}
+	
+.contact {
+	margin-top: 40px;
+}
+
+.contact ul {
+	list-style: none;
+	padding: 0;
+}
+
+.contact ul li {
+	margin-bottom: 10px;
+}
+
+.contact a {
+	color: rgba(0, 0, 0, 0.2);
+	text-decoration: none;
+}
+
+/* Right Section: Login Form */
+.right-section {
+	flex: 1;
+	background-color: #ffffff;
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 600px;
+}
+
+.form-container h2 {
+	color:rgba(0, 0, 0, 0.2);
+	margin-bottom: 20px;
+}
+
+.form-container form {
+	display: flex;
+	flex-direction: column;
+}
+
+form label {
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+form input {
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 1rem;
+}
+
+form a {
+	color:orange;
+	text-decoration: none;
+	margin-bottom: 20px;
+}
+
+form button {
+	padding: 10px;
+	background-color: orange;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1rem;
+	transition: background-color 0.3s ease;
+}
+
+form button:hover {
+	background-color:orange;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+	.container {
+		flex-direction: column;
+		padding: 0;
+	}
+
+	.left-section,
+	.right-section {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.right-section {
+		margin-bottom: 0;
+	}
+}
+.btn {
+	padding: 8px 16px;
+	border-radius: 5px;
+	font-size: 14px;
+	color:orange;
+	cursor: pointer;
+	border: none;
+	margin-right: 10px;
+	display: flex;
+	align-items: center;
+}

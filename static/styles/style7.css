@@ -1,0 +1,139 @@
+/* General Styles */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+	background-color: #d32f2f;
+	color: white;
+	padding: 10px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar .logo {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.nav-links a {
+	color: white;
+	margin: 0 10px;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.logout-btn {
+	background-color: #f44336;
+	padding: 5px 10px;
+	border-radius: 4px;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 20px auto;
+	background: white;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Account Info */
+.account-info {
+	margin-bottom: 20px;
+}
+
+/* Features & Services Section */
+.features-services {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+.features,
+.services {
+	width: 48%;
+}
+
+.features ul,
+.services ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.features ul li,
+.services ul li {
+	margin-bottom: 10px;
+}
+
+/* Transaction Section */
+.transaction-section {
+	margin-top: 30px;
+}
+
+#transactionForm {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+#transactionForm input,
+#transactionForm select,
+#transactionForm button {
+	padding: 8px;
+	font-size: 14px;
+}
+
+/* Table Styling */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+
+table,
+th,
+td {
+	border: 1px solid #ddd;
+}
+
+th,
+td {
+	padding: 10px;
+	text-align: left;
+}
+
+th {
+	background-color: #f2f2f2;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+	.features-services {
+		flex-direction: column;
+	}
+
+	.features,
+	.services {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	#transactionForm {
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	.nav-links {
+		display: none;
+	}
+
+	.navbar {
+		flex-direction: column;
+	}
+}
